@@ -37,14 +37,17 @@ header{
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
-    background-color: var(--greenBackground);
+    border: 1.8px solid var(--greenBackground);
     letter-spacing: 0.05rem;
     font-weight: 400;
 }
 
 .header__content p:hover{
     transform: scale(0.94);
-    
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    background-color: var(--greenBackground);
 }
 
 
