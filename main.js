@@ -1,13 +1,26 @@
-const d = document
-const serviceCard = d.querySelector('.services__card')
-const btnDiscover = d.querySelector('#discoverBtn')
-const serviceCardBack = d.querySelector('.services__card--back')
+const d = document;
+const serviceCard = d.querySelector('.services__card');
+const btnDiscover = d.querySelector('#discoverBtn');
+const serviceCardBack = d.querySelector('.services__card--back');
 
-btnDiscover.addEventListener('click', ()=>{
-    serviceCard.style.transform = 'rotateX(180deg)'
+function setupCardRotation() {
 
-})
+    function rotateCard(degrees) {
+        serviceCard.style.transform = `rotateX(${degrees}deg)`;
+    }
 
-serviceCardBack.addEventListener('mouseleave', ()=>{
-    serviceCard.style.transform = 'rotateX(0deg)'
-})
+    function showFront() {
+        rotateCard(0);
+    }
+
+    function showBack() {
+        rotateCard(180);
+    }
+
+    btnDiscover.addEventListener('click', showBack);
+    serviceCardBack.addEventListener('mouseleave', showFront);
+}
+
+//Call main function
+setupCardRotation();
+
