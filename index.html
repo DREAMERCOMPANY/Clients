@@ -42,33 +42,7 @@
     transform: rotateX(180deg); 
 } */
 
-    .services__card{
-      width: 250px;
-      height: 250px;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: all ease-in-out 1.2s;
-    }
-
-     
-
-    .face {
-      backface-visibility: hidden;
-      width: 100%;
-      height: 100%;
-      border-radius: 8px;
-      position: absolute;
-      cursor: pointer;
-    }
-
-    .services__card--front{
-      background-color: red;
-    }
-
-    .services__card--back{
-      transform: rotateX(180deg);
-      background-color: green;
-    }
+   
     </style>
 </head>
 <body>
@@ -114,20 +88,44 @@
     <section class="services__container">
 
       <article class="services__text">
-        <p>Services</p>
+        <p>¿What do we offer?</p>
         <p>We help you grow your bussines</p>
         <p> we're dedicated to propelling your business forward. Through our services in UI/UX design, web development, web research, and marketing, we provide the essential tools for growth and increased revenue. Our team ensures your digital presence is not only visually appealing but also strategically developed to engage your audience effectively. With our comprehensive approach, we pave the way for your business to thrive in the competitive online landscape, fostering growth and driving revenue.</p>
       </article>
       
-      <article class="services__cards">
+      <article class="services__cards"> 
 
         <div class="services__card">
 
           <div class="face services__card--front">
+
+           
+
+            <div class="subscribe__img">
             <span></span>
-            <h2>UI/UX Design</h2>
-            <p>30 clients</p>
-            <button id="discoverBtn">Discover</button>
+            </div>
+
+            <div class="subscribe__text">
+              <p>Design System</p>
+              <p>UX/UI Design</p>
+            </div>
+
+            <div class="subscribe__services">
+              <span>Ease</span>
+              <span>Motion</span>
+              <span>Drafting</span>
+             
+            </div>
+
+            <div class="subscribe__desc">
+              <p>Experts in UI/UX, Wireframing, and Prototyping for a seamless and engaging design experience</p>
+            </div>
+            <div class="subscribe__btn">
+              <button id="discoverBtn">Discover</button>
+            </div>
+
+            
+
           </div>
 
           <div class="face services__card--back">
