@@ -8,7 +8,7 @@ const serviceCardsContainer = d.querySelector('.services__card--back__cards')
 const cardsHideBtn = d.querySelector('#hideCardsBtn')
 const btnDesign = d.querySelector('#design__btn')
 btnDesign.addEventListener('click', showHideDesign)
-serviceCardBack.addEventListener('mouseleave', showFront);
+/* serviceCardBack.addEventListener('mouseleave', showFront); */
 
 btnDiscover.addEventListener('click', ()=> {
     showBack();
@@ -38,7 +38,7 @@ cardsHideBtn.addEventListener('click', ()=>{
 
 
 
-    serviceCardBack.addEventListener('mouseleave', showFront);
+    
 
 
 

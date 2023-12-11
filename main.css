@@ -273,7 +273,7 @@ header{
 
 
 .services__card--back__title{
-    background-color: var(--greenBackground);
+    background-color: #829323;
     width: 100%;
     padding: 12px;
     height: 340px;
@@ -390,9 +390,9 @@ header{
     padding: 5px 12px;
     color: var(--blackLyric);
     font-size: 1.1rem;
-    letter-spacing: 0.2px;
-    border-radius: 4px;
-    font-weight: 500;
+    letter-spacing: 0.2rem;
+    border-radius: 8px;
+    font-weight: 400;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(76, 86, 19, 0.9);
     font-family: inherit;
@@ -447,13 +447,14 @@ header{
 
 .services__card--back__cards div:nth-child(4) button{
     border: none;
-    background-color: var(--greenBackground);
+    box-shadow: 0px 1px 5px rgba(183, 206, 47, 0.4);
+    color: var(--whiteLyric);
+    background-color: rgb(40, 40, 40);
     padding: 4px 16px;
     border-radius: 8px;
     font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    opacity: 0.5;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
     cursor: pointer;
 }
 
