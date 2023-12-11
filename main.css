@@ -21,6 +21,11 @@ header{
    width: 100%;
 }
 
+.hide{
+    display: none;
+    visibility: hidden;
+}
+
 .header__content{
     display: flex;
     justify-content: end;
@@ -265,71 +270,198 @@ header{
     opacity: 1;
 }
 
-.services__card--back{
+
+
+.services__card--back__title{
+    background-color: var(--greenBackground);
+    width: 100%;
+    padding: 12px;
+    height: 340px;
+    border-radius:8px ;
+}
+
+.services__card--back__cards{
+   background-color: rgb(27, 27, 27);
+    padding: 12px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    padding: 12px;
+}
+
+.service__hero{
+    display: flex;
+    flex-direction: column;
 }
 
 .services__card--back__title{
-    margin-bottom: 12px;
+    animation-name: opacityTitleIn;
+    animation-name: opacityTitleOut;
+    
 }
 
-.services__card--back__title h2{
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 600;
+@keyframes opacityTitleIn{
+    from{
+        opacity: 0;
+
+    }
+
+    to{
+        opacity: 1;
+
+    }
 }
+
+@keyframes opacityTitleOut{
+    from{
+        opacity: 1;
+
+    }
+
+    to{
+        opacity: 0;
+
+    }
+}
+
+.services__card--back__title span:nth-child(1){
+    display: inline-block;
+    width: 100px;
+    align-self: center;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 12px;  
+    margin-top: 16px;
+    border-radius: 50%;
+    background-image: url('./Assets/icons/designheroIcon.jpg');
+    
+    
+}
+
+.services__card--back__title h2:nth-child(2){
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--blackLyric);
+    margin-bottom: 2px;
+    letter-spacing: 0.1px;
+    
+}
+
+.services__card--back__title p:nth-child(3){
+    font-size: 1rem;
+    color: var(--blackLyric);
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 16px;
+    letter-spacing: 0.1px;
+}
+
+.service__action{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.service__action--text h2{
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--blackLyric);
+
+}
+
+.service__action--text p{
+    font-size: 1rem;
+    color: var(--blackLyric);
+    text-align: justify;
+    font-weight: 300;
+    
+}
+.service__action--btn{
+    align-self: center;
+    justify-self: end;
+}
+
+.service__action--btn button{
+    background-color: var(--greenBackground);
+    border: none;
+    padding: 5px 12px;
+    color: var(--blackLyric);
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(76, 86, 19, 0.9);
+    font-family: inherit;
+}
+
 
 .services__card--back__item{
-    margin-bottom: 8px;
-    padding: 4px 8px;
-    border: 2px solid var(--greenBackground);
+    margin-bottom: 9px;
+    padding: 8px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(183, 206, 47, 0.8);
-
-   
+    
 }
 
 .services__card--back__item h2{
     font-size: 1.3rem;
     margin-bottom: 4px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.8px;
 }
 
 .services__card--back__item p{
     font-size: 1.1rem;
     padding-bottom: 4px;
     text-align: justify;
+    font-weight: 300;
+    opacity: 0.7;
 }
 
 .services__card--back__hero{
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4px;
 }
 
-.services__card--back__hero span:nth-child(2){
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 50%;
+.services__card--back__cards > div:nth-child(1), .services__card--back__cards > div:nth-child(2), .services__card--back__cards > div:nth-child(3){
+    box-shadow: 0px 1px 5px rgba(183, 206, 47, 0.4);
+    color: var(--whiteLyric);
+    background-color: rgb(40, 40, 40);
 }
 
-.icon__design{
-    background-image: url('./Assets/icons/designIcon.png');
+
+
+
+
+.services__card--back__cards div:nth-child(4){
+    box-shadow: none;
+    align-self: center;
+    margin-top: 20px;
 }
 
-.icon__branding{
-    background-image: url('./Assets/icons/brandingIcon.png');  
+.services__card--back__cards div:nth-child(4) button{
+    border: none;
+    background-color: var(--greenBackground);
+    padding: 4px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    opacity: 0.5;
+    cursor: pointer;
 }
 
-.icon__pers{
-    background-image: url('./Assets/icons/personalizationIcon.png');  
+.services__card--back__cards div:nth-child(4) button:hover{
+    opacity: 1;
 }
+
+
 
 
 
