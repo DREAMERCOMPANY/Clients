@@ -138,6 +138,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
 }
 
 .services__card{
@@ -330,13 +331,11 @@ header{
     height: 100px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     margin-bottom: 12px;  
     margin-top: 16px;
     border-radius: 50%;
-    background-image: url('./Assets/icons/designheroIcon.jpg');
-    
-    
+ 
 }
 
 .services__card--back__title h2:nth-child(2){
@@ -359,21 +358,16 @@ header{
 }
 
 .service__action{
-    display: grid;
-    grid-template-columns: 60% 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 0px;
 }
 
-.service__action--text h2{
-    font-size: 1.3rem;
-    text-align: center;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--blackLyric);
 
-}
 
 .service__action--text p{
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--blackLyric);
     text-align: justify;
     font-weight: 300;

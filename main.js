@@ -1,76 +1,298 @@
 const d = document;
-const serviceCard = d.querySelector('.services__card');
-const btnDiscover = d.querySelector('#discoverBtn');
-const serviceCardBack = d.querySelector('.services__card--back');
-const titleContainer = d.querySelector('.services__card--back__title')
-const cardsBackItem = d.querySelectorAll('.services__card--back__item')
-const serviceCardsContainer = d.querySelector('.services__card--back__cards')
-const cardsHideBtn = d.querySelector('#hideCardsBtn')
-const btnDesign = d.querySelector('#design__btn')
-btnDesign.addEventListener('click', showHideDesign)
+
+
+const cardsContainer = d.querySelector('.services__cards')
 /* serviceCardBack.addEventListener('mouseleave', showFront); */
 
-btnDiscover.addEventListener('click', ()=> {
-    showBack();
-    backIn()
-});
-
-cardsHideBtn.addEventListener('click', ()=>{
-    showFront()
-    serviceCardsContainer.classList.add('hide')
-    titleContainer.classList.remove('hide')
-    cardsBackItem.forEach(item => item.style.animation = 'none')
-})
 
 
+ 
 
-    function rotateCard(degrees) {
-        serviceCard.style.transform = `rotateX(${degrees}deg)`;
+
+    
+
+    
+
+/*Create Dynamic cards*/
+
+
+const productCards = []
+productCards.push(
+    {
+        frontImg: './Assets/img/uxCard.jpg',
+        frontTitle: 'Design System',
+        frontSubtitle: 'UX/UI Design',
+        frontServiceOne: 'Ease',
+        frontServiceTwo: 'Motion',
+        frontServiceThree: 'Drafting',
+        frontDesc: 'Experts in UI/UX, Wireframing, and Prototyping for a seamless and engaging design experience.',
+        backImg: './Assets/icons/designheroIcon.jpg',
+        backTitle: 'Better user experience',
+        backSubtitle: 'Increase your sales',
+        backDesc: 'Optimizing client experience drives sales, fostering satisfaction and closing deals seamlessly and effectively.',
+        backCardOneTitle: 'User Design',
+        backCardOneDesc: `Conduct thorough user research to grasp your audience's needs. `,
+        backCardTwoTitle: 'Consistent Branding',
+        backCardTwoDesc: `Ensure consistent brand identity across your website, apps, social media and marketing.`,
+        backCardThreeTitle: 'Personalization',
+        backCardThreeDesc: `Implement personalized experiences based on users behavior.`,
+    },
+
+    {
+    frontImg: './Assets/img/digitalMarketing.jpg',
+    frontTitle: 'Digital Marketing', 
+    frontSubtitle: 'SEO Strategies', 
+    frontServiceOne: ' Opt', 
+    frontServiceTwo: 'Manage', 
+    frontServiceThree: 'Create', 
+    frontDesc: 'Strategic digital marketing services for online visibility and engagement.', 
+    backImg: './Assets/icons/marketinIcon.jpg', 
+    backTitle: 'Boost Online Presence', 
+    backSubtitle: 'Drive Conversion', 
+    backDesc: 'Strategically enhance your online presence to drive conversion and achieve business goals.', 
+    backCardOneTitle: 'SEO Optimization', 
+    backCardOneDesc: 'Implement effective SEO strategies to improve website ranking and visibility.', 
+    backCardTwoTitle: 'Social Media Campaigns', 
+    backCardTwoDesc: 'Create and manage impactful social media campaigns for brand awareness.', 
+    backCardThreeTitle: 'Content Strategy',
+    backCardThreeDesc: 'Develop content marketing strategies for engaging and valuable user experiences.', 
+    },
+
+    
+)
+
+
+    function renderCards(arr){
+
+      for(card of productCards){
+
+        //main containers
+        const cardContainer = d.createElement('div')
+        const frontContainer = d.createElement('div')
+        const backContainer = d.createElement('div')
+    
+        //subElements for frontContainer
+        const frontImg = d.createElement('div')
+        const spanFrontImg = d.createElement('span')
+        spanFrontImg.style.backgroundImage = `url(${card.frontImg})`
+        frontImg.classList.add('subscribe__img')
+        //Append Elements
+        frontImg.appendChild(spanFrontImg)
+        console.log(frontImg)
+        
+        
+        //Create Elements and Added classes
+        const frontText = d.createElement('div')
+        const frontTitleText = d.createElement('p')
+        const frontSubtitleText = d.createElement('p')
+        frontTitleText.innerText = card.frontTitle
+        frontSubtitleText.innerText = card.frontSubtitle
+        frontText.classList.add('subscribe__text')
+        //Append Elements
+        frontText.appendChild(frontTitleText)
+        frontText.appendChild(frontSubtitleText)
+        
+    
+        
+    
+        //Create Elements and Added classes
+        const frontServices = d.createElement('div')
+        const frontServiceOne = d.createElement('span')
+        const frontServiceTwo = d.createElement('span')
+        const frontServiceThree = d.createElement('span')
+        frontServiceOne.innerText = card.frontServiceOne
+        frontServiceTwo.innerText = card.frontServiceTwo
+        frontServiceThree.innerText = card.frontServiceThree
+        frontServices.classList.add('subscribe__services')
+        //Append Elements
+        frontServices.appendChild(frontServiceOne)
+        frontServices.appendChild(frontServiceTwo)
+        frontServices.appendChild(frontServiceThree)
+        console.log(frontServices)
+    
+    
+    
+        const frontDesc = d.createElement('div')
+        const frontPDesc = d.createElement('p')
+        frontPDesc.innerHTML = card.frontDesc
+        frontDesc.classList.add('subscribe__desc')
+        //Append Elements
+        frontDesc.appendChild(frontPDesc)
+    
+        const frontBtn = d.createElement('div')
+        const frontBtnAction = d.createElement('button')
+        frontBtnAction.setAttribute('id','discoverBtn')
+        frontBtn.classList.add('subscribe__btn')
+        //Append Elements
+        frontBtn.appendChild(frontBtnAction)
+        frontBtnAction.innerText = 'Discover'
+        console.log(frontBtn)
+    
+        //Create backElements
+        const backTitleContainer = d.createElement('article')
+        const backCardsContainer = d.createElement('article')
+        backTitleContainer.classList.add('services__card--back__title')
+        backCardsContainer.classList.add('services__card--back__cards', 'hide')
+        
+        //TitleBackElements
+        const backHero = d.createElement('div')
+        const spanHero = d.createElement('span')
+        const backHeroTitle = d.createElement('h2')
+        const backHeroSubtitle = d.createElement('p')
+        backHeroTitle.innerText = card.backTitle
+        backHeroSubtitle.innerText = card.backSubtitle
+        spanHero.classList.add('title__icon')
+        spanHero.style.backgroundImage = `url(${card.backImg})`
+        backHero.classList.add('service__hero')
+        //Append Elements
+        
+        backHero.append(spanHero,backHeroTitle, backHeroSubtitle)
+    
+    
+    
+        //Create elements and added classes
+        const backAction = d.createElement('div')
+        const backActionText = d.createElement('div')
+        const backActionTextP = d.createElement('p')
+        const backActionBtn = d.createElement('div')
+        const backActionBtnView = d.createElement('button')
+        backActionBtnView.innerText = 'View'
+        backActionBtnView.setAttribute('id', 'design__btn')
+        backActionBtn.classList.add('service__action--btn')
+        backActionTextP.innerText = card.backDesc
+        backActionText.classList.add('service__action--text')
+        backAction.classList.add('service__action')
+        //Append Elements
+        backActionBtn.appendChild(backActionBtnView)
+        backActionText.appendChild(backActionTextP)
+        backAction.append(backActionText, backActionBtn)
+    
+        //Elements for first backCardContainer
+        const backCardItemOne = d.createElement('div')
+        backCardItemOne.classList.add('services__card--back__item', 'hide')
+        const backCardItemOneTitle = d.createElement('div')
+        backCardItemOneTitle.classList.add('services__card--back__hero')
+        const backCardItemOneTitleP = d.createElement('p')
+        backCardItemOneTitleP.innerText = card.backCardOneTitle
+        const backCardItemOneDesc = d.createElement('p')
+        backCardItemOneDesc.innerText = card.backCardOneDesc
+        //Append Elements
+        backCardItemOneTitle.appendChild(backCardItemOneTitleP)
+        backCardItemOne.append(backCardItemOneTitle, backCardItemOneDesc)
+    
+        
+    
+        //Elements for Second backCardContainer
+        const backCardItemTwo = d.createElement('div')
+        backCardItemTwo.classList.add('services__card--back__item', 'hide')
+        const backCardItemTwoTitle = d.createElement('div')
+        backCardItemTwoTitle.classList.add('services__card--back__hero')
+        const backCardItemTwoTitleP = d.createElement('p')
+        backCardItemTwoTitleP.innerText = card.backCardTwoTitle
+        const backCardItemTwoDesc = d.createElement('p')
+        backCardItemTwoDesc.innerText = card.backCardTwoDesc
+        //Append Elements
+        backCardItemTwoTitle.appendChild(backCardItemTwoTitleP)
+        backCardItemTwo.append(backCardItemTwoTitle, backCardItemTwoDesc)
+    
+        //Elements for Third backCardContainer
+        const backCardItemThree = d.createElement('div')
+        backCardItemThree.classList.add('services__card--back__item', 'hide')
+        const backCardItemThreeTitle = d.createElement('div')
+        backCardItemThreeTitle.classList.add('services__card--back__hero')
+        const backCardItemThreeTitleP = d.createElement('p')
+        backCardItemThreeTitleP.innerText = card.backCardThreeTitle
+        const backCardItemThreeDesc = d.createElement('p')
+        backCardItemThreeDesc.innerText = card.backCardThreeDesc
+        //Append Elements
+        backCardItemThreeTitle.appendChild(backCardItemThreeTitleP)
+        backCardItemThree.append(backCardItemThreeTitle, backCardItemThreeDesc)
+    
+    
+        //Elements for Fourth Card
+        const backCardItemFour = d.createElement('div')
+        backCardItemFour.classList.add('services__card--back__item', 'hide')
+        const backCardItemFourBtn = d.createElement('button')
+        backCardItemFourBtn.setAttribute('id', 'hideCardsBtn')
+        //Append Elements
+        backCardItemFour.appendChild(backCardItemFourBtn)
+        backCardItemFourBtn.innerText = 'Hide'
+    
+        
+        backCardsContainer.append(backCardItemOne,backCardItemTwo,backCardItemThree, backCardItemFour)
+        backTitleContainer.append(backHero,backAction)
+        backContainer.append(backTitleContainer,backCardsContainer)
+        frontContainer.append(frontImg,frontText,frontServices,frontDesc,frontBtn)
+        cardContainer.append(frontContainer, backContainer)
+        backContainer.classList.add('face', 'services__card--back')
+        frontContainer.classList.add('face', 'services__card--front')
+        cardContainer.classList.add('services__card')
+        cardsContainer.appendChild(cardContainer)
+    
+        console.log(cardContainer)
+        
+    }  
+
+    
+
+
     }
 
-    function showFront() {
-        rotateCard(0);
-    }
-
-    function showBack() {
-        rotateCard(180);
-    }
+    window.addEventListener('load', renderCards(productCards))
 
 
+    const discoverBtns = d.querySelectorAll('#discoverBtn')
+    const frontFaces = d.querySelectorAll('.services__card')
+    
+
+    discoverBtns.forEach((btn,index) =>{
+        btn.setAttribute('id', `discoverBtn${index+1}`)
+    })
+
+    frontFaces.forEach((face, index)=>{
+        face.setAttribute('id', `face${index + 1}`)
+    })
+
+    const btnOne = d.querySelector('#discoverBtn1')
+    const btnTwo = d.querySelector('#discoverBtn2')
+    const faceOne = d.querySelector('#face1')
+    const faceTwo = d.querySelector('#face2')
+
+    
+    btnOne.addEventListener('click', ()=>{
+        faceOne.style.transform = 'rotateX(180deg)'
+        
+    }) 
+
+    
+    btnTwo.addEventListener('click', ()=>{
+        faceTwo.style.transform = 'rotateX(180deg)'
+    })
+
+   
+
+    
+
+    
+    
+
+
+
+   
 
     
 
 
 
-console.log(cardsBackItem)
-
-function backIn(){
-    titleContainer.style.opacity = '0';
-    titleContainer.style.animation = 'opacityTitleIn 2s 0.9s ease-in-out forwards';
-}
 
 
 
-function backOut(){
-    titleContainer.style.opacity = '1';
-    titleContainer.style.animation = 'opacityTitleOut 1.2s 0.4s ease-in-out forwards';
-} 
 
-function removeBackIn(){
-    titleContainer.classList.add('hide')
-    serviceCardsContainer.classList.remove('hide')
-    cardsBackItem.forEach((item, index) => {
-        const delay = `${index * 0.3}s`
-        item.style.opacity = '0';
-        item.style.animation = `opacityTitleIn 2s ${delay} ease-in-out forwards` ;
-        item.classList.remove('hide')
-    }) 
-}
 
-function showHideDesign(){
-    backOut()
-    setTimeout(removeBackIn, 1000)   
-}
+
+
+
+
 
 //Call main function
 
