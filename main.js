@@ -243,8 +243,24 @@ productCards.push(
 
     const discoverBtns = d.querySelectorAll('#discoverBtn')
     const frontFaces = d.querySelectorAll('.services__card')
-    
+    const designBtns = d.querySelectorAll('#design__btn')
+    const serviceCardsBack = d.querySelectorAll('.services__card--back__title')
+    const backCardsContent = d.querySelectorAll('.services__card--back__cards')
+   
 
+    designBtns.forEach((btn,index)=>{
+        btn.setAttribute('id',`design__btn${index + 1}`)
+    })
+
+    serviceCardsBack.forEach((card,index)=> card.setAttribute('id', `serviceCardTitle${index + 1}`))
+    backCardsContent.forEach((card,index)=> card.setAttribute('id', `cardContent${index + 1}`))
+ 
+
+
+    console.log(designBtns)
+    console.log(serviceCardsBack)
+    console.log(backCardsContent)
+   
     discoverBtns.forEach((btn,index) =>{
         btn.setAttribute('id', `discoverBtn${index+1}`)
     })
@@ -257,10 +273,54 @@ productCards.push(
     const btnTwo = d.querySelector('#discoverBtn2')
     const faceOne = d.querySelector('#face1')
     const faceTwo = d.querySelector('#face2')
+    const designBtnOne = d.querySelector('#design__btn1')
+    const cardTitleOne = d.querySelector('#serviceCardTitle1')
+    const backCardOne = d.querySelector('#cardContent1')
+    const backCardItems = d.querySelectorAll('.services__card--back__item')
+
+   
+   
+
+    
+
+   
+    //refactorizar codigo en una funcion con parametros
+    //Una funcion que reciba los botones
+
+    
+    designBtnOne.addEventListener('click', ()=>{
+        cardTitleOne.classList.add('hide')
+        backCardOne.classList.remove('hide')
+
+        const children = Array.from(backCardOne.children)
+
+        if(children.length>0){
+            const lastItem = children[children.length - 1]
+            const hideBtn = lastItem.querySelector('#hideCardsBtn')
+            
+            hideBtn.addEventListener('click', ()=>{
+                faceOne.style.transform = 'rotateX(0deg)'
+                cardTitleOne.classList.remove('hide')
+                backCardOne.classList.add('hide')
+                children.forEach(item => item.style.animation = 'none')
+            })
+        }
+
+
+        children.forEach((item, index)=>{
+            item.classList.remove('hide')
+            item.style.opacity = '0'
+            let delay = `${0.2 * index}s`;
+            item.style.animation =  `opacityTitleIn ease-in-out 1.5s ${delay} forwards`    
+        })
+    })
+
+
 
     
     btnOne.addEventListener('click', ()=>{
         faceOne.style.transform = 'rotateX(180deg)'
+        
         
     }) 
 
