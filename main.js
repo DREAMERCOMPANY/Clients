@@ -1,17 +1,5 @@
 const d = document;
-
-
 const cardsContainer = d.querySelector('.services__cards')
-/* serviceCardBack.addEventListener('mouseleave', showFront); */
-
-
-
- 
-
-
-    
-
-    
 
 /*Create Dynamic cards*/
 
@@ -57,6 +45,25 @@ productCards.push(
     backCardThreeTitle: 'Content Strategy',
     backCardThreeDesc: 'Develop content marketing strategies for engaging and valuable user experiences.', 
     },
+    {
+        frontImg: './Assets/img/digitalMarketing.jpg',
+        frontTitle: 'Digital Marketing', 
+        frontSubtitle: 'SEO Strategies', 
+        frontServiceOne: ' Opt', 
+        frontServiceTwo: 'Manage', 
+        frontServiceThree: 'Create', 
+        frontDesc: 'Strategic digital marketing services for online visibility and engagement.', 
+        backImg: './Assets/icons/marketinIcon.jpg', 
+        backTitle: 'Boost Online Presence', 
+        backSubtitle: 'Drive Conversion', 
+        backDesc: 'Strategically enhance your online presence to drive conversion and achieve business goals.', 
+        backCardOneTitle: 'SEO Optimization', 
+        backCardOneDesc: 'Implement effective SEO strategies to improve website ranking and visibility.', 
+        backCardTwoTitle: 'Social Media Campaigns', 
+        backCardTwoDesc: 'Create and manage impactful social media campaigns for brand awareness.', 
+        backCardThreeTitle: 'Content Strategy',
+        backCardThreeDesc: 'Develop content marketing strategies for engaging and valuable user experiences.', 
+        }
 
     
 )
@@ -238,6 +245,7 @@ productCards.push(
 
     }
 
+
     window.addEventListener('load', renderCards(productCards))
 
 
@@ -248,27 +256,13 @@ productCards.push(
     const backCardsContent = d.querySelectorAll('.services__card--back__cards')
    
 
-    designBtns.forEach((btn,index)=>{
-        btn.setAttribute('id',`design__btn${index + 1}`)
-    })
-
+    designBtns.forEach((btn, index) => btn.setAttribute('id', `design__btn${index + 1}`));
     serviceCardsBack.forEach((card,index)=> card.setAttribute('id', `serviceCardTitle${index + 1}`))
     backCardsContent.forEach((card,index)=> card.setAttribute('id', `cardContent${index + 1}`))
- 
+    discoverBtns.forEach((btn, index) => btn.setAttribute('id', `discoverBtn${index + 1}`));
+    frontFaces.forEach((face, index) => face.setAttribute('id', `face${index + 1}`));
 
-
-    console.log(designBtns)
-    console.log(serviceCardsBack)
-    console.log(backCardsContent)
-   
-    discoverBtns.forEach((btn,index) =>{
-        btn.setAttribute('id', `discoverBtn${index+1}`)
-    })
-
-    frontFaces.forEach((face, index)=>{
-        face.setAttribute('id', `face${index + 1}`)
-    })
-
+  
     const btnOne = d.querySelector('#discoverBtn1')
     const btnTwo = d.querySelector('#discoverBtn2')
     const faceOne = d.querySelector('#face1')
@@ -276,32 +270,27 @@ productCards.push(
     const designBtnOne = d.querySelector('#design__btn1')
     const cardTitleOne = d.querySelector('#serviceCardTitle1')
     const backCardOne = d.querySelector('#cardContent1')
+    const designBtnTwo = d.querySelector('#design__btn2')
+    const cardTitleTwo = d.querySelector('#serviceCardTitle2')
+    const backCardTwo = d.querySelector('#cardContent2')
     const backCardItems = d.querySelectorAll('.services__card--back__item')
 
-   
-   
-
     
 
-   
-    //refactorizar codigo en una funcion con parametros
-    //Una funcion que reciba los botones
+     function viewCardContent(cardTitle,backCard,face){
+        cardTitle.classList.add('hide')
+        backCard.classList.remove('hide')
 
-    
-    designBtnOne.addEventListener('click', ()=>{
-        cardTitleOne.classList.add('hide')
-        backCardOne.classList.remove('hide')
-
-        const children = Array.from(backCardOne.children)
+        const children = Array.from(backCard.children)
 
         if(children.length>0){
             const lastItem = children[children.length - 1]
             const hideBtn = lastItem.querySelector('#hideCardsBtn')
             
             hideBtn.addEventListener('click', ()=>{
-                faceOne.style.transform = 'rotateX(0deg)'
-                cardTitleOne.classList.remove('hide')
-                backCardOne.classList.add('hide')
+                face.style.transform = 'rotateX(0deg)'
+                cardTitle.classList.remove('hide')
+                backCard.classList.add('hide')
                 children.forEach(item => item.style.animation = 'none')
             })
         }
@@ -313,21 +302,22 @@ productCards.push(
             let delay = `${0.2 * index}s`;
             item.style.animation =  `opacityTitleIn ease-in-out 1.5s ${delay} forwards`    
         })
-    })
 
+     }
 
-
-    
-    btnOne.addEventListener('click', ()=>{
-        faceOne.style.transform = 'rotateX(180deg)'
-        
-        
-    }) 
+     designBtnOne.addEventListener('click', () => viewCardContent(cardTitleOne , backCardOne , faceOne))
+     designBtnTwo.addEventListener('click', () => viewCardContent(cardTitleTwo , backCardTwo , faceTwo))
 
     
-    btnTwo.addEventListener('click', ()=>{
-        faceTwo.style.transform = 'rotateX(180deg)'
-    })
+    function discoverCards(btn,face){
+        btn.addEventListener('click', () => face.style.transform = 'rotateX(180deg)')
+    }
+
+    btnOne.addEventListener('click', discoverCards(btnOne, faceOne))
+    btnTwo.addEventListener('click', discoverCards(btnTwo, faceTwo))
+
+    
+   
 
    
 
