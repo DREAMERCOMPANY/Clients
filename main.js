@@ -60,9 +60,9 @@ productCards.push(
     backCardOneTitle: 'Optimized Content',
     backCardOneDesc: 'Craft and optimize compelling content to improve website ranking.',
     backCardTwoTitle: 'Social Media Engagement',
-    backCardTwoDesc: 'Execute and manage impactful social media campaigns to enhance your brand.',
+    backCardTwoDesc: 'Execute and manage impactful social media campaigns.',
     backCardThreeTitle: 'Content Strategy Development',
-    backCardThreeDesc: 'Develop comprehensive content marketing strategies to atract more clients.', 
+    backCardThreeDesc: 'Develop comprehensive content marketing strategies for clients.', 
     } 
 )
 

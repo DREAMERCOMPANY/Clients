@@ -287,6 +287,7 @@ header{
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    height: 340px;
 }
 
 .service__hero{
@@ -406,6 +407,11 @@ header{
     text-align: center;
     font-weight: 400;
     letter-spacing: 0.8px;
+}
+
+.services__card--back__item p:nth-child(1){
+    font-size: 1.3rem;
+    opacity: 0.9;
 }
 
 .services__card--back__item p{
