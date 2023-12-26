@@ -3,6 +3,14 @@ const cardsContainer = d.querySelector('.services__cards')
 
 /*Create Dynamic cards*/
 
+/*
+TASKS
+
+1. poner las cards en flex overscroll horizontal en mobile y en desktop en grid
+2. mirar el diseño de esa seccion y terminarlo.
+3.continuar con la siguiente seccion
+*/
+
 
 const productCards = []
 productCards.push(
