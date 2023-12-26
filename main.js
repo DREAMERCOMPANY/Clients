@@ -46,26 +46,24 @@ productCards.push(
     backCardThreeDesc: 'Develop content marketing strategies for engaging and valuable user experiences.', 
     },
     {
-        frontImg: './Assets/img/digitalMarketing.jpg',
-        frontTitle: 'Digital Marketing', 
-        frontSubtitle: 'SEO Strategies', 
-        frontServiceOne: ' Opt', 
-        frontServiceTwo: 'Manage', 
-        frontServiceThree: 'Create', 
-        frontDesc: 'Strategic digital marketing services for online visibility and engagement.', 
-        backImg: './Assets/icons/marketinIcon.jpg', 
-        backTitle: 'Boost Online Presence', 
-        backSubtitle: 'Drive Conversion', 
-        backDesc: 'Strategically enhance your online presence to drive conversion and achieve business goals.', 
-        backCardOneTitle: 'SEO Optimization', 
-        backCardOneDesc: 'Implement effective SEO strategies to improve website ranking and visibility.', 
-        backCardTwoTitle: 'Social Media Campaigns', 
-        backCardTwoDesc: 'Create and manage impactful social media campaigns for brand awareness.', 
-        backCardThreeTitle: 'Content Strategy',
-        backCardThreeDesc: 'Develop content marketing strategies for engaging and valuable user experiences.', 
-        }
-
-    
+    frontImg: './Assets/img/contentDev.jpg',
+    frontTitle: 'Content Development',
+    frontSubtitle: 'Strategic Content Creation',
+    frontServiceOne: 'Create',
+    frontServiceTwo: 'Optimize',
+    frontServiceThree: 'Engage',
+    frontDesc: 'Strategic content development services for optimizing online visibility and audience engagement.',
+    backImg: './Assets/img/contentDev2.jpg',
+    backTitle: 'Enhance Online Presence',
+    backSubtitle: 'Drive User Engagement',
+    backDesc: 'Strategically elevate your online presence to engage users effectively and achieve business objectives.',
+    backCardOneTitle: 'Optimized Content',
+    backCardOneDesc: 'Craft and optimize compelling content to improve website ranking.',
+    backCardTwoTitle: 'Social Media Engagement',
+    backCardTwoDesc: 'Execute and manage impactful social media campaigns to enhance your brand.',
+    backCardThreeTitle: 'Content Strategy Development',
+    backCardThreeDesc: 'Develop comprehensive content marketing strategies to atract more clients.', 
+    } 
 )
 
 
@@ -265,14 +263,19 @@ productCards.push(
   
     const btnOne = d.querySelector('#discoverBtn1')
     const btnTwo = d.querySelector('#discoverBtn2')
+    const btnThree = d.querySelector('#discoverBtn3')
     const faceOne = d.querySelector('#face1')
     const faceTwo = d.querySelector('#face2')
+    const faceThree = d.querySelector('#face3')
     const designBtnOne = d.querySelector('#design__btn1')
     const cardTitleOne = d.querySelector('#serviceCardTitle1')
     const backCardOne = d.querySelector('#cardContent1')
     const designBtnTwo = d.querySelector('#design__btn2')
     const cardTitleTwo = d.querySelector('#serviceCardTitle2')
     const backCardTwo = d.querySelector('#cardContent2')
+    const designBtnThree = d.querySelector('#design__btn3')
+    const cardTitleThree = d.querySelector('#serviceCardTitle3')
+    const backCardThree = d.querySelector('#cardContent3')
     const backCardItems = d.querySelectorAll('.services__card--back__item')
 
     
@@ -307,6 +310,7 @@ productCards.push(
 
      designBtnOne.addEventListener('click', () => viewCardContent(cardTitleOne , backCardOne , faceOne))
      designBtnTwo.addEventListener('click', () => viewCardContent(cardTitleTwo , backCardTwo , faceTwo))
+     designBtnThree.addEventListener('click', () => viewCardContent(cardTitleThree , backCardThree , faceThree))
 
     
     function discoverCards(btn,face){
@@ -315,6 +319,7 @@ productCards.push(
 
     btnOne.addEventListener('click', discoverCards(btnOne, faceOne))
     btnTwo.addEventListener('click', discoverCards(btnTwo, faceTwo))
+    btnThree.addEventListener('click', discoverCards(btnThree, faceThree))
 
     
    
