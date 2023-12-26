@@ -334,27 +334,6 @@ productCards.push(
 
    
 
-    
-
-    
-    
-
-
-
-   
-
-    
-
-
-
-
-
-
-
-
-
-
-
 
 
 //Call main function
