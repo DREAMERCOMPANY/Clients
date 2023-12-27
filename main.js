@@ -1,12 +1,22 @@
 const d = document;
 const cardsContainer = d.querySelector('.services__cards')
 const contactBtn = d.querySelector('#contact')
+let iterationCount = 0
 
 contactBtn.addEventListener('click', ()=>{
     const number = '+573009563427';
     const urlWhatsApp = `https://api.whatsapp.com/send?phone=${number}&text=Hola,%20quiero%20contactar%20contigo.`;
     window.open(urlWhatsApp, '_blank')
 })
+
+contactBtn.addEventListener('animationiteration', () => {
+    iterationCount++;
+
+    // Si ha alcanzado las 5 iteraciones, cancela la animación
+    if (iterationCount >= 3) {
+        contactBtn.style.animation = 'none'; 
+    }
+});
 
 /*Create Dynamic cards*/
 
@@ -272,8 +282,27 @@ productCards.push(
     designBtns.forEach((btn, index) => btn.setAttribute('id', `design__btn${index + 1}`));
     serviceCardsBack.forEach((card,index)=> card.setAttribute('id', `serviceCardTitle${index + 1}`))
     backCardsContent.forEach((card,index)=> card.setAttribute('id', `cardContent${index + 1}`))
-    discoverBtns.forEach((btn, index) => btn.setAttribute('id', `discoverBtn${index + 1}`));
+    discoverBtns.forEach((btn, index) => {
+        let iterationCount = 0
+        btn.setAttribute('id', `discoverBtn${index + 1}`)
+        btn.addEventListener('animationiteration', ()=>{
+            iterationCount++
+            if(iterationCount>=5){
+                btn.style.animation = 'none'
+            }
+        })
+    });
+
+
     frontFaces.forEach((face, index) => face.setAttribute('id', `face${index + 1}`));
+
+    discoverBtns.addEventListener('animationiteration', ()=>{
+        iterationCount++
+
+        if(iterationCount>=5){
+            discoverBtns.style.animation = 'none'
+        }
+    })
 
   
     const btnOne = d.querySelector('#discoverBtn1')

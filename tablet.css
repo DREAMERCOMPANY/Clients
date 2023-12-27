@@ -11,3 +11,8 @@
 .services__text p:nth-child(2){
     text-align: center;
 }
+
+.contact__container{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+}

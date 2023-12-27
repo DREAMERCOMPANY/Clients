@@ -14,3 +14,7 @@
 .services__text p:nth-child(2){
     width: 50%;
 }
+
+.contact__container--right p:nth-child(1){
+    text-align: center;
+}

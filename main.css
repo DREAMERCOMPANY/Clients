@@ -107,8 +107,7 @@ header{
 /*Contact Styles*/
 
 .contact__container{
-    width: 100%;
-    margin: 16px auto;
+    
     display: grid;
     gap: 12px;
     place-items: center; 
@@ -168,12 +167,26 @@ header{
     background-color: #292929;
     color: #C5C5C7;
     opacity: 0.5;
+    animation: contactBtn 1.2s ease-in-out infinite;
     
+   
 }
 
-.contact__container--right button:nth-child(2):hover{
-    opacity: 1;
+@keyframes contactBtn{
+    from{
+        transform: scale(1);
+        opacity: 0.5;
+
+    }
+
+    to{
+        transform: scale(1.04);
+        opacity: 1;
+    }
 }
+
+
+
 
 
 
@@ -342,7 +355,7 @@ header{
     letter-spacing: 0.1rem;
     opacity: 0.5;
     cursor: pointer;
-    
+    animation: contactBtn 1.2s ease-in-out infinite;
 }
 
 .subscribe__btn button:hover{
