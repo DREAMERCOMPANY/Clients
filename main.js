@@ -296,14 +296,7 @@ productCards.push(
 
     frontFaces.forEach((face, index) => face.setAttribute('id', `face${index + 1}`));
 
-    discoverBtns.addEventListener('animationiteration', ()=>{
-        iterationCount++
-
-        if(iterationCount>=5){
-            discoverBtns.style.animation = 'none'
-        }
-    })
-
+    
   
     const btnOne = d.querySelector('#discoverBtn1')
     const btnTwo = d.querySelector('#discoverBtn2')
