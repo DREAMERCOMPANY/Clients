@@ -1,0 +1,16 @@
+.services__cards{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.services__credentials{
+    grid-template-columns: repeat(4,1fr);
+    width: 80%;
+    
+}
+
+.services__text p:nth-child(2){
+    width: 50%;
+}
