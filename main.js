@@ -1,5 +1,12 @@
 const d = document;
 const cardsContainer = d.querySelector('.services__cards')
+const contactBtn = d.querySelector('#contact')
+
+contactBtn.addEventListener('click', ()=>{
+    const number = '+573009563427';
+    const urlWhatsApp = `https://api.whatsapp.com/send?phone=${number}&text=Hola,%20quiero%20contactar%20contigo.`;
+    window.open(urlWhatsApp, '_blank')
+})
 
 /*Create Dynamic cards*/
 
