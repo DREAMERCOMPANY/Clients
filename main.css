@@ -659,18 +659,79 @@ header{
 .services__explain--cards__all div{
     width: 75%;
     margin: 0 auto;
-    height: 220px;
+    height: auto;
+    padding: 12px;
     border-radius: 12px;
     font-size: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 1px 2px 3px #f2f2f2;
     color: var(--whiteLyric);
     background-color: rgb(40, 40, 40);
+}
 
+.services__explain--cards__all div h2{
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.services__explain--cards__all div p{
+    margin-bottom: 16px;
+    text-align: justify;
+    font-weight: 200;
+}
+
+.services__explain--cards__all div button{
+     padding: 4px 12px;
+     border-radius: 8px;
+     border: none;
+     font-size: 1.2rem;
+     font-weight: 500;
+     letter-spacing: 0.1rem;
+     opacity: 0.5;
+     cursor: pointer;
+     background-color: rgba(255, 165, 0, 0.4);
+}
+
+.services__explain--cards__all div button:hover{
+    opacity: 1;
+}
+
+.services__explain--cards__all div span{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 12px;
+    border-radius: 10%;
+}
+
+.service__card--design span:first-child{
+    background-image: url('./Assets/img/design.jpg');
 
 }
+
+.service__card--marketing span:first-child{
+    background-image: url('./Assets/img/marketing.jpg');
+
+}
+
+.service__card--content span:first-child{
+    background-image: url('./Assets/img/content.jpg');
+    
+}
+
+.service__card--finance span:first-child{
+    background-image: url('./Assets/img/financepic.jpg');
+    
+}
+
 
 
 @keyframes cardsMove{
