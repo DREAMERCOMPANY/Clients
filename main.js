@@ -2,6 +2,148 @@ const d = document;
 const cardsContainer = d.querySelector('.services__cards')
 const contactBtn = d.querySelector('#contact')
 let iterationCount = 0
+const contentCards = d.querySelector('.services__explain--cards__all')
+const cardsServicesOffer= d.querySelectorAll('.cards__item')
+const btnsAction = d.querySelectorAll('.actionCard')
+const designCard = d.querySelector('.services__explain--cards__design')
+const marketingCard = d.querySelector('.services__explain--cards__marketing')
+const contentCard = d.querySelector('.services__explain--cards__content')
+const financeCard = d.querySelector('.services__explain--cards__finance')
+const backBtn = d.querySelectorAll('.backBtn')
+
+
+console.log(cardsServicesOffer)
+
+backBtn.forEach(btn =>{
+    btn.addEventListener('click', ()=>{
+
+        if(btn.classList.contains('designBtn')){
+            designCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            setTimeout(()=>{
+                designCard.classList.add('hide')
+                contentCards.classList.remove('hide')
+            },1200)
+            
+        }
+
+        if(btn.classList.contains('marketingBtn')){
+            marketingCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            setTimeout(()=>{
+                marketingCard.classList.add('hide')
+                contentCards.classList.remove('hide')
+            },1200)
+            
+        }
+
+        if(btn.classList.contains('contentBtn')){
+            contentCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            setTimeout(()=>{
+                contentCard.classList.add('hide')
+                contentCards.classList.remove('hide')
+            },1200)
+            
+        }
+
+        if(btn.classList.contains('financeBtn')){
+            financeCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            setTimeout(()=>{
+                financeCard.classList.add('hide')
+                contentCards.classList.remove('hide')
+            },1200)
+        }
+
+
+    })
+})
+
+btnsAction.forEach(btn =>{
+
+    btn.addEventListener('click', ()=>{
+
+        function hideSection(){
+            setTimeout(()=>{
+                contentCards.classList.add('hide')
+            }, 400)  
+        }
+
+
+
+         if(btn.classList.contains('designCard')){
+            setTimeout(()=>{
+                hideSection()
+                designCard.classList.remove('hide')
+            },250)
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--design')){
+                    card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                }
+            })
+
+            designCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
+        }
+
+        if(btn.classList.contains('marketingCard')){
+
+            setTimeout(()=>{
+                hideSection()
+                marketingCard.classList.remove('hide')
+            }, 250)
+           
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--marketing')){
+                    card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                }
+            })
+
+
+            marketingCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
+            
+            
+        }
+
+        if(btn.classList.contains('contentCard')){
+
+            setTimeout(()=>{
+                hideSection()
+                contentCard.classList.remove('hide')
+            },250)
+            
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--content')){
+                    card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                }
+            })
+
+            contentCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards' 
+        }
+
+        if(btn.classList.contains('financeCard')){
+
+            setTimeout(()=>{
+                hideSection()
+                financeCard.classList.remove('hide')
+            })
+            
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--finance')){
+                    card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                }
+            })
+
+
+            financeCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
+    
+        }
+
+
+    })
+   
+
+})
 
 contactBtn.addEventListener('click', ()=>{
     const number = '+573009563427';

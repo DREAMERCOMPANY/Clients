@@ -22,8 +22,9 @@ header{
 }
 
 .hide{
-    display: none;
+    display: none !important;
     visibility: hidden;
+    opacity: 0;
 }
 
 .header__content{
@@ -365,7 +366,7 @@ header{
 
 
 .services__card--back__title{
-    background-color: #829323;
+    background-color: #B7CE2F;
     width: 100%;
     padding: 12px;
     height: 340px;
@@ -391,6 +392,8 @@ header{
     animation-name: opacityTitleOut;
     
 }
+
+
 
 @keyframes opacityTitleIn{
     from{
@@ -426,7 +429,7 @@ header{
     background-size: cover;
     margin-bottom: 12px;  
     margin-top: 16px;
-    border-radius: 50%;
+    border-radius: 10px;
  
 }
 
@@ -471,17 +474,23 @@ header{
 }
 
 .service__action--btn button{
-    background-color: var(--greenBackground);
+    background-color: #292929;
+    color: #C5C5C7;
     border: none;
-    padding: 5px 12px;
-    color: var(--blackLyric);
-    font-size: 1.1rem;
-    letter-spacing: 0.2rem;
-    border-radius: 8px;
-    font-weight: 400;
+    padding: 5px 13px;
+    margin-top: 12px;
+    opacity: 0.5;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    border-radius: 6px;
+    font-weight: thin;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(76, 86, 19, 0.9);
     font-family: inherit;
+}
+
+.service__action--btn button:hover{
+    opacity: 1;
 }
 
 
@@ -543,10 +552,15 @@ header{
     background-color: rgb(40, 40, 40);
     padding: 4px 16px;
     border-radius: 8px;
+    opacity: 0.5;
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.2rem;
     cursor: pointer;
+}
+
+.services__card--back__cards div:nth-child(4) button:hover{
+    opacity: 1;
 }
 
 .services__card--back__cards div:nth-child(4) button:hover{
@@ -588,6 +602,104 @@ header{
     font-size: 1rem;
     text-align: center;
 }
+
+/*Service cards styles*/
+
+.services__explain{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    background-color: #2D2D2D;
+}
+
+.services__explain--text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 90%;
+    margin: 0 auto 12px auto;
+}
+
+.services__explain--text h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-align: center; 
+    color: var(--whiteLyric);
+}
+
+.services__explain--text p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: justify;
+    color: var(--whiteLyric);
+}
+
+.services__explain--items{
+    margin-bottom: 16px;
+    display: none;
+    gap: 8px;
+    justify-content: end;
+}
+
+.services__explain--cards{
+    width: 100%;
+    height: auto;
+}
+
+.services__explain--cards__all{
+    display: grid;
+    gap: 12px;
+    width: 100%;
+    height: auto;
+}
+
+.services__explain--cards__all div{
+    width: 75%;
+    margin: 0 auto;
+    height: 220px;
+    border-radius: 12px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 3px #f2f2f2;
+    color: var(--whiteLyric);
+    background-color: rgb(40, 40, 40);
+
+
+}
+
+
+@keyframes cardsMove{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+    to{
+        opacity: 0.5;
+        transform: translateX(720px);
+    }
+}
+
+.services__explain--cards__design , .services__explain--cards__marketing, .services__explain--cards__content, .services__explain--cards__finance{
+    width: 90%;
+    height: 250px;
+    box-shadow: 0px 1px 5px rgba(183, 206, 47, 0.4);
+    color: var(--whiteLyric);
+    background-color: rgb(40, 40, 40);
+    border-radius: 8px;
+    display: flex;
+    font-size: 2rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 

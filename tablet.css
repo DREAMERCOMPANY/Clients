@@ -16,3 +16,6 @@
     display: grid;
     grid-template-columns:repeat(2,1fr);
 }
+.services__explain--items{
+    display: flex;
+}
