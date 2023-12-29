@@ -1,6 +1,13 @@
-Thing to do on 28/12/2023
+Things to do on 28/12/2023 => DONE
 
 1. Mejorar estilos en las cards que giran en la parte del btn view y Hide, mejorar el UI
 2. Crear seccion de 'Get more clientes' Dinamicamente con JS , seguir el diseño de figma y mejorarlo.
 3. la interaccion se da cada vez que se le da click a los items que llevan a la seccion especifica.
 4. Si el link esta active que muestre la seccion y si no, que la quite.
+
+Things to do on 29/12/2023 => DONE
+
+1. Agregar contenido en las cards Design, Marketing, Content , Finance
+2. Crear animacion en los botones cada vez que se detecte el estado Hover para incitar al usuario a dar click
+3. Mostrar menu en desktop
+4. Adaptar las cards en tablet, desktop y hacer que todo interactue bien.
