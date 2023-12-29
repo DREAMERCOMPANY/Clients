@@ -1,0 +1,6 @@
+Thing to do on 28/12/2023
+
+1. Mejorar estilos en las cards que giran en la parte del btn view y Hide, mejorar el UI
+2. Crear seccion de 'Get more clientes' Dinamicamente con JS , seguir el diseño de figma y mejorarlo.
+3. la interaccion se da cada vez que se le da click a los items que llevan a la seccion especifica.
+4. Si el link esta active que muestre la seccion y si no, que la quite.
