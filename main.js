@@ -18,38 +18,70 @@ backBtn.forEach(btn =>{
     btn.addEventListener('click', ()=>{
 
         if(btn.classList.contains('designBtn')){
-            designCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            designCard.style.transform = 'scale(0.9)'
+            designCard.style.boxShadow = '0px 1px 5px #64DAF5';
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--design')){
+                    card.style.transform = 'scale(1)'
+                }
+            })
+
+
             setTimeout(()=>{
                 designCard.classList.add('hide')
                 contentCards.classList.remove('hide')
-            },1200)
+            },500)
             
         }
 
         if(btn.classList.contains('marketingBtn')){
-            marketingCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            marketingCard.style.transform = 'scale(0.9)'
+            marketingCard.style.boxShadow = '0px 1px 5px #721BD1';
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--marketing')){
+                    card.style.transform = 'scale(1)'
+                }
+            })
+
             setTimeout(()=>{
                 marketingCard.classList.add('hide')
                 contentCards.classList.remove('hide')
-            },1200)
+            },500)
             
         }
 
         if(btn.classList.contains('contentBtn')){
-            contentCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            contentCard.style.transform = 'scale(0.9)'
+            contentCard.style.boxShadow = '0px 1px 5px #DC6C75';
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--content')){
+                    card.style.transform = 'scale(1)'
+                }
+            })
             setTimeout(()=>{
                 contentCard.classList.add('hide')
                 contentCards.classList.remove('hide')
-            },1200)
+            },500)
             
         }
 
         if(btn.classList.contains('financeBtn')){
-            financeCard.style.animation = 'cardsMove 1.5s ease-in-out 0s forwards'
+            financeCard.style.transform = 'scale(0.9)'
+            financeCard.style.boxShadow = '0px 1px 5px #E78B27';
+
+            cardsServicesOffer.forEach(card =>{
+                if(card.classList.contains('service__card--finance')){
+                    card.style.transform = 'scale(1)'
+                }
+            })
+
             setTimeout(()=>{
                 financeCard.classList.add('hide')
                 contentCards.classList.remove('hide')
-            },1200)
+            },500)
         }
 
 
@@ -61,9 +93,7 @@ btnsAction.forEach(btn =>{
     btn.addEventListener('click', ()=>{
 
         function hideSection(){
-            setTimeout(()=>{
                 contentCards.classList.add('hide')
-            }, 400)  
         }
 
 
@@ -72,15 +102,18 @@ btnsAction.forEach(btn =>{
             setTimeout(()=>{
                 hideSection()
                 designCard.classList.remove('hide')
-            },250)
+            },400)
 
             cardsServicesOffer.forEach(card =>{
                 if(card.classList.contains('service__card--design')){
                     card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                    card.style.transform = 'scale(0.9)'
                 }
             })
 
-            designCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
+            designCard.style.transform = 'scale(1)'
+            designCard.style.boxShadow = '0px 1px 5px #032435';
+            //designCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
         }
 
         if(btn.classList.contains('marketingCard')){
@@ -88,17 +121,19 @@ btnsAction.forEach(btn =>{
             setTimeout(()=>{
                 hideSection()
                 marketingCard.classList.remove('hide')
-            }, 250)
+            }, 400)
            
 
             cardsServicesOffer.forEach(card =>{
                 if(card.classList.contains('service__card--marketing')){
                     card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                    card.style.transform = 'scale(0.9)'
                 }
             })
 
-
-            marketingCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
+            marketingCard.style.transform = 'scale(1)'
+            marketingCard.style.boxShadow = '0px 1px 5px #380E8E';
+            //marketingCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
             
             
         }
@@ -108,16 +143,19 @@ btnsAction.forEach(btn =>{
             setTimeout(()=>{
                 hideSection()
                 contentCard.classList.remove('hide')
-            },250)
+            },400)
             
 
             cardsServicesOffer.forEach(card =>{
                 if(card.classList.contains('service__card--content')){
                     card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                    card.style.transform = 'scale(0.9)'
                 }
             })
 
-            contentCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards' 
+            contentCard.style.transform = 'scale(1)'
+            contentCard.style.boxShadow = '0px 1px 5px #A23B4C';
+            //contentCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards' 
         }
 
         if(btn.classList.contains('financeCard')){
@@ -125,17 +163,19 @@ btnsAction.forEach(btn =>{
             setTimeout(()=>{
                 hideSection()
                 financeCard.classList.remove('hide')
-            })
+            }, 400)
             
 
             cardsServicesOffer.forEach(card =>{
                 if(card.classList.contains('service__card--finance')){
                     card.style.boxShadow = '0px 1px 5px rgba(255, 165, 0, 0.4)';
+                    card.style.transform = 'scale(0.9)'
                 }
             })
 
-
-            financeCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
+            financeCard.style.transform = 'scale(1)'
+            financeCard.style.boxShadow = '0px 1px 5px #9A2E04';
+            //financeCard.style.animation = 'opacityTitleIn 1.5s ease-in-out 0s forwards'
     
         }
 
