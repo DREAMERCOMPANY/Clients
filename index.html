@@ -151,49 +151,43 @@
     <section></section>
 
     <!-- Samuel -->
-    <section class="form">
-      <h1>Registro</h1>
-      <form id="formulario">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
-          <br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <br>
-          <label for="pais">País:</label>
-          <select id="pais" name="pais">
-              <option value="">Seleccione un país</option>
-              <option value="Argentina">Argentina</option>
-              <option value="Bolivia">Bolivia</option>
-              <option value="Chile">Chile</option>
-              <option value="Colombia">Colombia</option>
-              <option value="Ecuador">Ecuador</option>
-              <option value="Guatemala">Guatemala</option>
-              <option value="Honduras">Honduras</option>
-              <option value="Mexico">México</option>
-              <option value="Nicaragua">Nicaragua</option>
-              <option value="Paraguay">Paraguay</option>
-              <option value="Peru">Perú</option>
-              <option value="Puerto Rico">Puerto Rico</option>
-              <option value="Spain">España</option>
-              <option value="USA">USA</option>
-              <option value="Uruguay">Uruguay</option>
-              <option value="Venezuela">Venezuela</option>
-          </select>
-          
-          <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-            <br>
-          <label for="empresa">Empresa:</label>
-          <input type="text" id="empresa" name="empresa">
-          <br>
-          <label for="boletin">Suscribirse al boletín:</label>
-          <input type="checkbox" id="boletin" name="boletin">
-          <br>
-          <button type="submit">Registrarse</button>
-      </form>
-      
-    </section>
+    <div class="container-form" id="containerx_form">
+      <div class="containery-form"id="containery_form">
+          <section class="form">
+            <h1>Registro</h1>
+            <form id="registroForm" class="registro-form">
+              <label for="nombre">Mame:</label>
+              <input type="text" id="nombre" name="nombre" class="input-field" required>
+              <br>
+              <label for="apellido">Last name:</label>
+              <input type="text" id="apellido" name="apellido" class="input-field" required>
+              <label for="email">Mail:</label>
+              <input type="email" id="email" name="email" class="input-field" required>
+              <br>
+              <label for="pais">Country:</label>
+              <input type="text" id="pais" name="pais" class="input-field" required>
+              <br>
+              
+              <label for="empresa">Company:</label>
+              <input type="text" id="empresa" name="empresa" class="input-field">
+              <br>
+              <label for="company">¿Are you a startup?</label>
+              <div>
+                  <input type="checkbox" id="NO" name="ARE NOT" class="nostartup">
+                  <label>
+                    <P>Yes</P>
+                  </label>
+                  <input type="checkbox" id="YES" name="ARE" class="yestartup">
+                  <label>
+                    <p>No</p>
+                  </label>
+                  <br>
+              </div>
+              <button type="submit" class="submit-button">Registrarse</button>
+            </form>
+          </section>
+      </div>    
+    </div>
 
     
     

@@ -526,6 +526,18 @@ const formulario = document.getElementById('formulario');
                 return;
             }
             
-            alert(`Registro exitoso, ${nombre} ${apellido}! Tu país es ${pais}, tu empresa es ${empresa}, y ${boletin ? 'te has suscrito' : 'no te has suscrito'} al boletín.`);
+            alert(`Registro exitoso, ${nombre} ${apellido}!, tu empresa es ${empresa}, y ${boletin ? 'te has suscrito' : 'no te has suscrito'} al boletín.`);
         });
 
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            console.log('Name: ', name);
+            console.log('Email: ', email);
+            console.log('Message: ', message);
+            // Submit the form data to the server
+        }); // for this part, i think tha we need backend, because we need a server for send teh dates
+
+         
