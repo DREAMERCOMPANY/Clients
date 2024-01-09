@@ -754,21 +754,13 @@ header{
     justify-content: center;
     align-items: center;
 }
-/* General styling */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 40px;
-    background-color:#C5C5C7
-  }
+
   
   /* Container for the form */
   .container-form {
-    width: 400px;
     margin: 0 auto; /* Center the form horizontally */
     border: 1px solid #ccc;
-    padding: 40px;
-    border-radius: 5px;
+    padding:40px;
   }
   
   /* Heading for the form */
@@ -786,16 +778,21 @@ body {
   }
   
   label {
-    display: block;
+    font-size: 1.2rem;
+    display: flex;
+    
+    letter-spacing: 0.1rem;
     margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--blackLyric);
   }
   
   /* Checkbox labels */
-  .nostartup,
+  /* .nostartup,
   .yestartup {
     display: inline-block;
     margin-right: 10px;
-  }
+  } */
   
   /* Submit button */
   .submit-button {
@@ -808,23 +805,29 @@ body {
   }
   .container-form {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: flex-end;
-    /* i have to change the image, give time for search one better*/
-    background-image: url('/Assets/img/background.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+   background-image: linear-gradient(180deg, #B7CE2F 0%, #2D2D2D 100%);
 
 
   }
   
   .containery-form {
-    width: 40%;
+    width: 100%;
   }
+
+  .containery-text{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+
   .form {
     width: 100%;
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f9fa;
@@ -832,9 +835,11 @@ body {
 }
 
 .form h1 {
-    font-size: 2em;
-    color: #343a40;
+    font-size: 1.8rem;
+    color: #2D2D2D;
     margin-bottom: 20px;
+    font-weight: 500;
+    
 }
 
 .form .input-field {
@@ -843,19 +848,33 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ced4da;
     border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.btnForm{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .form .submit-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--greenBackground);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    opacity: 0.5;
+    color: #2D2D2D;
     cursor: pointer;
+    
+    
 }
 
 .form .submit-button:hover {
-    background-color: #0056b3;
+    opacity: 1;
 }
   
 .services__explain--cards__design{
@@ -878,6 +897,23 @@ body {
 
 }
 
+
+.startupContent{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    padding: 12px 0;
+    
+}
+
+label p{
+    font-size: 1.1rem;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    
+}
 .services__explain--cards__design , .services__explain--cards__marketing , .services__explain--cards__content , 
 .services__explain--cards__finance {
     display: flex;

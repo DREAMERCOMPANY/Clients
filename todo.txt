@@ -11,3 +11,18 @@ Things to do on 29/12/2023 => DONE
 2. Crear animacion en los botones cada vez que se detecte el estado Hover para incitar al usuario a dar click
 3. Mostrar menu en desktop
 4. Adaptar las cards en tablet, desktop y hacer que todo interactue bien.
+
+
+Taks to do by 01/15/2024
+
+1. Mejorar los logos del header para que tengan una mejor resolucion UX/UI --JHON
+2. Hacer bien el tamaño de la letra en responsive --SAMU
+3. mejorar un poco mas la UI/UX en terminos generales. --JHON
+4. Crear menu desplegable en mobile, ocultar form en mobile y mostrarlo desde el menu desplegable --SAMU
+5. Refactorizar el codigo con objetos, clases y prototipos --JHON , SAMU
+6. Enlazar formulario al back end --JHON , SAMU
+
+
+
+
+
