@@ -550,7 +550,7 @@ productCards.push(
 //Call main function
 
 
-const formulario = document.getElementById('formulario');
+/* const formulario = document.getElementById('formulario');
         formulario.addEventListener('submit', (event) => {
             event.preventDefault();
             const nombre = document.getElementById('nombre').value;
@@ -578,6 +578,25 @@ const formulario = document.getElementById('formulario');
             console.log('Email: ', email);
             console.log('Message: ', message);
             // Submit the form data to the server
-        }); // for this part, i think tha we need backend, because we need a server for send teh dates
+        }); // for this part, i think tha we need backend, because we need a server for send teh dates */
 
          
+const inputNo = document.querySelector('#NO')
+const inputYes = document.querySelector('#YES')
+
+
+
+ // Event listener for the checkboxes
+ function toggleCheckboxes(event) {
+    if (event.target === inputNo && inputNo.checked) {
+      inputYes.checked = false; // Desmarca el otro checkbox
+    } else if (event.target === inputYes && inputYes.checked) {
+      inputNo.checked = false; // Desmarca el otro checkbox
+    }
+  }
+
+  // Agrega el evento de cambio a ambos checkboxes
+  inputNo.addEventListener('change', toggleCheckboxes);
+  inputYes.addEventListener('change', toggleCheckboxes);
+
+
