@@ -16,6 +16,30 @@
     display: grid;
     grid-template-columns:repeat(2,1fr);
 }
-.services__explain--items{
-    display: flex;
+
+
+/*Card services Style*/
+
+.services__explain--cards__all div{
+    width: 100%;
 }
+.services__explain--cards__all{
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.services__explain--text p{
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.services__explain--cards__design , .services__explain--cards__marketing , .services__explain--cards__content , 
+.services__explain--cards__finance {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+}
+

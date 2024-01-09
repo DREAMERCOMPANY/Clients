@@ -637,12 +637,7 @@ header{
     color: var(--whiteLyric);
 }
 
-.services__explain--items{
-    margin-bottom: 16px;
-    display: none;
-    gap: 8px;
-    justify-content: end;
-}
+
 
 .services__explain--cards{
     width: 100%;
@@ -659,18 +654,79 @@ header{
 .services__explain--cards__all div{
     width: 75%;
     margin: 0 auto;
-    height: 220px;
+    height: auto;
+    padding: 12px;
     border-radius: 12px;
     font-size: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 1px 2px 3px #f2f2f2;
     color: var(--whiteLyric);
     background-color: rgb(40, 40, 40);
+}
 
+.services__explain--cards__all div h2{
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.services__explain--cards__all div p{
+    margin-bottom: 16px;
+    text-align: justify;
+    font-weight: 200;
+}
+
+.services__explain--cards__all div button{
+     padding: 4px 12px;
+     border-radius: 8px;
+     border: none;
+     font-size: 1.2rem;
+     font-weight: 500;
+     letter-spacing: 0.1rem;
+     opacity: 0.5;
+     cursor: pointer;
+     background-color: rgba(255, 165, 0, 0.4);
+}
+
+.services__explain--cards__all div button:hover{
+    opacity: 1;
+}
+
+.services__explain--cards__all div span{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 12px;
+    border-radius: 10%;
+}
+
+.service__card--design span:first-child{
+    background-image: url('./Assets/img/design.jpg');
 
 }
+
+.service__card--marketing span:first-child{
+    background-image: url('./Assets/img/marketing.jpg');
+
+}
+
+.service__card--content span:first-child{
+    background-image: url('./Assets/img/content.jpg');
+    
+}
+
+.service__card--finance span:first-child{
+    background-image: url('./Assets/img/financepic.jpg');
+    
+}
+
 
 
 @keyframes cardsMove{
@@ -688,12 +744,11 @@ header{
 
 .services__explain--cards__design , .services__explain--cards__marketing, .services__explain--cards__content, .services__explain--cards__finance{
     width: 90%;
-    height: 250px;
-    box-shadow: 0px 1px 5px rgba(183, 206, 47, 0.4);
+    padding: 12px;
+    height: auto;
     color: var(--whiteLyric);
     background-color: rgb(40, 40, 40);
     border-radius: 8px;
-    display: flex;
     font-size: 2rem;
     margin: 0 auto;
     justify-content: center;
@@ -761,6 +816,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
+
   }
   
   .containery-form {
@@ -802,6 +858,142 @@ body {
     background-color: #0056b3;
 }
   
+.services__explain--cards__design{
+    box-shadow: 0px 1px 4px #032435;
+
+}
+
+.services__explain--cards__marketing{
+    box-shadow: 0px 1px 4px #380E8E;
+
+}
+
+.services__explain--cards__content{
+    box-shadow: 0px 1px 4px #CF2C03;
+
+}
+
+.services__explain--cards__finance{
+    box-shadow: 0px 1px 4px #9A2E04;
+
+}
+
+.services__explain--cards__design , .services__explain--cards__marketing , .services__explain--cards__content , 
+.services__explain--cards__finance {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card__design--hero, .card__marketing--hero , .card__content--hero , .card__finance--hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    
+}
+
+.card__design--hero span, .card__marketing--hero span , .card__content--hero span ,  .card__finance--hero span{
+    display: inline-block;
+    width: 55px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.card__design--hero span{
+    background-image: url('./Assets/img/bottle.png');
+}
+
+.card__marketing--hero span{
+    background-image: url('./Assets/img/marketingicon.png');
+    
+
+}
+
+.card__content--hero span{
+    background-image: url('./Assets/img/contentIcon.png');
+
+}
+
+.card__finance--hero span{
+    background-image: url('./Assets/img/financeIcon.png');
+
+}
+
+.card__design--hero span:nth-child(1), .card__marketing--hero span:nth-child(1) , .card__content--hero span:nth-child(1)
+{
+    transform: rotate(30deg);
+}
+
+.card__design--hero span:nth-child(3), .card__marketing--hero span:nth-child(3) , .card__content--hero span:nth-child(3) {
+    transform: rotate(-30deg);
+}
+
+.card__design--hero h2 , .card__marketing--hero h2 , .card__content--hero h2 , .card__finance--hero h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
+
+.card__design--desc , .card__marketing--desc , .card__content--desc , .card__finance--desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__design--desc p , .card__marketing--desc p , .card__content--desc p , .card__finance--desc p{
+    width: 95%;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+
+.card__design--desc button , .card__marketing--desc button , .card__content--desc button, .card__finance--desc button {
+    align-self: center;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    opacity: 0.5;
+    cursor: pointer;
+    border: none;
+    color: #f2f2f2;
+}
+
+.card__design--desc button{
+    box-shadow: 0px 1px 4px #64DAF5;
+    background-color: #032435;
+}
+
+.card__marketing--desc button{
+    box-shadow: 0px 1px 4px #721BD1;
+    background-color:  #380E8E;
+}
+
+.card__content--desc button{
+    box-shadow: 0px 1px 4px #DC6C75;
+    background-color:  #A23B4C;
+}
+
+.card__finance--desc button{
+    box-shadow: 0px 1px 4px #E78B27;
+    background-color:  #9A2E04;
+}
+
+.card__design--desc button:hover, .card__marketing--desc button:hover , .card__content--desc button:hover, .card__finance--desc button:hover{
+    opacity: 1;
+}
+
+
+
+
 
 
 

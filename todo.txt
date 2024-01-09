@@ -7,7 +7,7 @@ Things to do on 28/12/2023 => DONE
 
 Things to do on 29/12/2023 => DONE
 
-1. Agregar contenido en las cards Design, Marketing, Content , Finance
+1. Agregar contenido en las cards Design, Marketing, Content , Finance | crear lad cards dinamicamente con JS
 2. Crear animacion en los botones cada vez que se detecte el estado Hover para incitar al usuario a dar click
 3. Mostrar menu en desktop
 4. Adaptar las cards en tablet, desktop y hacer que todo interactue bien.
